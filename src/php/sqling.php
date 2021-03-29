@@ -12,6 +12,7 @@ class Sqling {
 	private $sqlCPU = '';
 	private $sqlRAM = '';
 	private $netDevicesDataSQL = array();
+	private $drivesSQL = array();
 
 	private $sqlGetCPUUsage = '';
 
@@ -45,6 +46,13 @@ class Sqling {
 			$netSQL = 'INSERT INTO `networkdevices` (`Name`, `ReceivedBytes`, `SentBytes`, `Status`, `DeviceType`, `NetworkDate`) VALUES ("' . $a[0] . '","' . $a[1] . '","' . $a[2] . '","' . $a[3] . '","' . $a[4] . '", NOW())';
 		
 			array_push($this->netDevicesDataSQL, $netSQL);
+		}	
+		
+		foreach ($parser["HD"] as $key => $value) {
+			$a = array($value["name"], $value["vendor"], $value["device"], $value["size"], 0, 0);
+			$HDSQL = 'INSERT INTO `drives` (`Name`, `Vendor`, `Device`, `DeviceSize`, `Free`, `Used`, `DriveDate`) VALUES ("' . $a[0] . '","' . $a[1] . '","' . $a[2] . '","' . $a[3] . '","' . $a[4] . '","' . $a[5] . '", NOW())';
+		
+			array_push($this->drivesSQL, $HDSQL);
 		}		
 	}
 	
@@ -53,6 +61,9 @@ class Sqling {
 		$this->databaseConnection->query($this->sqlCPU);
 		$this->databaseConnection->query($this->sqlRAM);
 		foreach ($this->netDevicesDataSQL as $key => $value) {
+			$this->databaseConnection->query($value);
+		}
+		foreach ($this->drivesSQL as $key => $value) {
 			$this->databaseConnection->query($value);
 		}
 	}
