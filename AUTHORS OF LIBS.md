@@ -1,3 +1,4 @@
+https://github.com/jrgp/linfo
 List of contributors
 
 Lead author/developer/BDFL: Joe Gillotti <joe@u13.net>
