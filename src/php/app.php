@@ -48,7 +48,7 @@ $sqling->generateRAMWarning();
 // $names = ["OS", "Kernel", "AccessedIP", "Distro", "RAM", "HD", "Mounts", "Load", "HostName", "UpTime", "CPU", "Model", "CPUArchitecutre", "Network Devices", "Devices", "Temps", "Battery", "Raid", "Wifi", "SoundCards", "processStats", "services", "numLoggedIn", "virtualization", "cpuUsage", "phpVersion", "webService", "contains"];
 // $parser = $linfo->getInfo();
 
-$objects = new Objects();
+$objects = new Objects(true, true, true, true, true, true, $emergency);
 
 // Table for system specs
 $objects->showSystem();
