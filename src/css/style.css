@@ -1,0 +1,133 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 125%;
+	/* width: 100vw; */
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+		font-size: 90%;
+	}
+
+	table {
+		width: 100%;
+	}
+}
+
+table {
+	border: 1px solid cornflowerblue;
+	border-collapse: collapse;
+	background-color: #E8E8E8;
+	/* border-radius: 5px; */
+	/* width: 100%; */
+}
+
+tr,
+td {
+	border: 1px solid cornflowerblue;
+}
+
+td:first-child {
+	font-weight: bold;
+	background-color: gainsboro;
+}
+
+/* table tr:last-child td:first-child {
+	border-bottom-left-radius: 5px;
+} */
+
+/* table tr:last-child td:last-child {
+	border-bottom-right-radius: 5px;
+} */
+
+/* td[colspan] {
+	background-color: cornflowerblue;
+} */
+
+/* table tr:first-child {
+	background-color: cornflowerblue;
+} */
+
+.parameter {
+	background-color: cornflowerblue !important;
+	/* font-weight: bold; */
+}
+
+#devtype {
+	background-color: #E8E8E8;
+	font-weight: normal;
+}
+
+#devtypestyle {
+	background-color: gainsboro;
+	font-weight: bold;
+}
+
+select {
+	width: 100px;
+	background-color: yellow;
+	font-size: 125%;
+}
+
+.pulsate {
+	background-color: yellow;
+	-webkit-animation: color_change 2s infinite alternate;
+	-moz-animation: color_change 2s infinite alternate;
+	-ms-animation: color_change 2s infinite alternate;
+	-o-animation: color_change 2s infinite alternate;
+	animation: color_change 2s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+	from {
+		color: red;
+	}
+
+	to {
+		color: blue;
+	}
+}
+
+@-moz-keyframes color_change {
+	from {
+		color: red;
+	}
+
+	to {
+		color: blue;
+	}
+}
+
+@-ms-keyframes color_change {
+	from {
+		color: red;
+	}
+
+	to {
+		color: blue;
+	}
+}
+
+@-o-keyframes color_change {
+	from {
+		color: red;
+	}
+
+	to {
+		color: blue;
+	}
+}
+
+@keyframes color_change {
+	from {
+		color: red;
+	}
+
+	to {
+		color: blue;
+	}
+}
+
+.red {
+	color: red;
+}
