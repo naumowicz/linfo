@@ -83,7 +83,7 @@ $sqling->closeConnection();
 $objects->emergencyDisplay();
 
 ?>
-<script src="main.js"></script>
-<script src="bubbles.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/bubbles.js"></script>
 </body>
 </html>
