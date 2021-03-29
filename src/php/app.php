@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>System Info</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="icon" href="favicon.png" type="image/x-con">
+	<link rel="icon" href="../img/favicon.png" type="image/x-con">
 </head>
 <body>
 <p>

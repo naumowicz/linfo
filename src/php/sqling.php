@@ -73,7 +73,7 @@ class Sqling {
 	} 
 
 	function generateCPUWarning() {
-		$JSON = file_get_contents("config.json");
+		$JSON = file_get_contents("../../config.json");
 		$array = json_decode($JSON, true);
 
 		$sqlCPUWarning = "SELECT * FROM cpuinfo WHERE (UsagePercentage >= " . $array["CPUwarning"] . ") AND (CPUDate > DATE_SUB(NOW(), INTERVAL 1 DAY))";
@@ -118,7 +118,7 @@ class Sqling {
 	}
 
 	function generateRAMWarning() {
-		$JSON = file_get_contents("config.json");
+		$JSON = file_get_contents("../../config.json");
 		$array = json_decode($JSON, true);
 		
 		$sqlRAMWarning = "SELECT * FROM `ram` WHERE Free / Total < " . $array["RAMwarning"] . "AND (RAMDate > DATE_SUB(NOW(), INTERVAL 1 DAY))";
