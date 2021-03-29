@@ -1,0 +1,9 @@
+{
+    "bytes": "GiB",
+	"time": 15000,
+	"CPUwarning": 70,
+	"CPUmax": 90,
+	"RAMwarning": 0.3,
+	"RAMmax": 0.1,
+	"ShowErrorDate": true
+}
